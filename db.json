@@ -5,6 +5,30 @@
       "name": "Shivam Solanki",
       "email": "shivam123@gmail.com",
       "possword": "12346"
+    },
+    {
+      "id": "9efd",
+      "name": "Shivam Rajput",
+      "password": "12345678",
+      "email": "rajput1234@gmail.com"
+    },
+    {
+      "id": "f66f",
+      "name": "Shivam Rajput",
+      "password": "12345678",
+      "email": "rajput1234@gmail.com"
+    },
+    {
+      "id": "7094",
+      "name": "laddu",
+      "password": "123456",
+      "email": "laddu@123gmail.com"
+    },
+    {
+      "id": "b89c",
+      "name": "shiv",
+      "password": "12345678",
+      "email": "shiv@gmail.com"
     }
   ]
 }
