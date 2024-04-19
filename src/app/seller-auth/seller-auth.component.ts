@@ -13,6 +13,7 @@ export class SellerAuthComponent implements OnInit {
 
   constructor(private seller : SellerService , private router : Router  ) { }
   showLogin = false;
+  authErrorMsg:string = "";
   ngOnInit(): void {
     this.seller.relodeSeller()
   } 
@@ -23,7 +24,14 @@ export class SellerAuthComponent implements OnInit {
   
     
   logInForm(data:SignUp):void{
-    console.log(data);
+    this.authErrorMsg = "";
+    // console.log(data);
+    this.seller.userLogin(data);
+    this.seller.isSellerLogInError.subscribe((isError)=> {
+      if(isError){
+        this.authErrorMsg  = "Email or PassWord in Not Correct"
+      }
+    })
     
  }
   openLogIn(){
