@@ -1,13 +1,24 @@
 <nav class="navber">
-    <h1 class="logo">e-Commers</h1>
-    <div class="nav-search">
-      <input type="search" placeholder="Search Products"/>
-      <button>search</button>
-    </div>
-    <ul>
+  <h1 class="logo"><a routerLink="/">e-Commers</a></h1>
+  <div class="nav-search" *ngIf="menuType === 'default'">
+    <input type="search" placeholder="Search Products" />
+    <button>search</button>
+  </div>
+  <div [ngSwitch]="menuType">
+    <ul *ngSwitchCase="'default'">
       <li><a routerLink="">Home</a></li>
-        <li><a routerLink="/seller-auth">Seller</a></li>
-          <li><a href="#">Login</a></li>
-            <li><a href="#">Cart(0)</a></li>   
+      <li><a routerLink="/seller-auth">Seller</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Cart(0)</a></li>
     </ul>
-  </nav>
+  </div>
+
+  <div [ngSwitch]="menuType">
+    <ul *ngSwitchCase="'seller'">
+      <li><a >Product List</a></li>
+      <li><a >Add Products</a></li>
+      <li><a href="#">LogOut</a></li>
+      <li><a href="#">Seller Name</a></li>
+    </ul>
+  </div>
+</nav>
